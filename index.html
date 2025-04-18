@@ -6,29 +6,37 @@
   <title>Школа</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet">
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
       font-family: 'Playfair Display', serif;
-      background-color: #ffffff;
+      background-color: #f4f4f4;
       color: #333;
-      padding: 0 80px;
-      box-sizing: border-box;
+    }
+    header, .nav-wrapper, main, footer {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
     }
     header {
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
       padding: 20px 0;
       background-color: #ffffff;
       border-bottom: 2px solid #ccc;
+      text-align: center;
     }
     .logo-title {
       display: flex;
       align-items: center;
-      gap: 15px;
+      gap: 10px;
     }
     .logo {
-      width: 80px;
+      width: 60px;
       height: auto;
     }
     .logo-text {
@@ -37,12 +45,10 @@
       color: #005bff;
     }
     .school-address {
-      text-align: center;
-      font-size: 17px;
-      font-weight: normal;
+      font-size: 13px;
     }
     .contacts {
-      text-align: right;
+      text-align: center;
     }
     .contacts p {
       margin: 0;
@@ -58,18 +64,14 @@
     }
     .nav-wrapper {
       background-color: #005bff;
-      padding: 20px 0;
-      display: flex;
-      justify-content: center;
+      padding: 15px 0;
       border-bottom: 2px solid #ccc;
     }
     nav {
       display: flex;
-      justify-content: space-between;
-      width: 100%;
-      max-width: 1000px;
-      position: relative;
-      gap: 40px;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
     }
     nav a,
     .dropdown-button {
@@ -79,14 +81,9 @@
       font-size: 16px;
       padding: 5px 10px;
       border-radius: 4px;
-      transition: background-color 0.3s;
       background: none;
       border: none;
       cursor: pointer;
-    }
-    nav a:hover,
-    .dropdown-button:hover {
-      background-color: rgba(255, 255, 255, 0.2);
     }
     .dropdown {
       position: relative;
@@ -102,11 +99,6 @@
       transform: rotate(180deg);
     }
     .dropdown-content {
-      display: block;
-      opacity: 0;
-      visibility: hidden;
-      transform: translateY(-10px);
-      transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
       position: absolute;
       top: 35px;
       left: 0;
@@ -116,6 +108,10 @@
       z-index: 1;
       border-radius: 6px;
       padding: 10px;
+      display: none;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
     }
     .dropdown-content a {
       color: #333;
@@ -127,26 +123,22 @@
     .dropdown-content a:hover {
       background-color: #f0f0f0;
     }
-    .dropdown:hover .dropdown-content {
-      opacity: 1;
-      visibility: visible;
-      transform: translateY(0);
-    }
     main {
       display: flex;
-      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 40px;
       padding: 30px 0;
+      justify-content: center;
     }
-    .left-side {
-      width: 45%;
+    .left-side, .right-side {
+      flex: 1 1 300px;
+      max-width: 600px;
     }
     .left-side h1 {
-      font-size: 36px;
-      margin-bottom: 10px;
+      font-size: 32px;
     }
     .left-side p {
-      margin: 12px 0;
-      font-size: 20px;
+      font-size: 18px;
     }
     .buttons {
       margin-top: 20px;
@@ -161,41 +153,47 @@
       cursor: pointer;
       font-size: 16px;
     }
-    .right-side {
-      width: 50%;
-      text-align: center;
-    }
     .right-side img {
       max-width: 100%;
       border-radius: 10px;
     }
     footer {
-      background-color: #99ccff;
-      color: #333;
+      background-color: #333;
+      color: #fff;
       padding: 20px 0;
-      display: flex;
-      justify-content: center;
     }
     .footer-wrapper {
       display: flex;
-      justify-content: space-around;
-      width: 100%;
-      background-color: #99ccff;
-      border: 2px solid #ccccff;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      background-color: #444;
+      border: 1px solid #ccccff;
       border-radius: 16px;
       padding: 20px;
-      box-sizing: border-box;
     }
     .footer-section {
       text-align: center;
+      max-width: 300px;
     }
     .footer-section img {
-      width: 40px;
+      width: 50px;
       height: auto;
       margin-bottom: 10px;
     }
     .footer-section p {
       margin: 4px 0;
+    }
+    @media (max-width: 600px) {
+      .logo-text {
+        font-size: 18px;
+      }
+      .left-side h1 {
+        font-size: 24px;
+      }
+      .left-side p, .buttons button {
+        font-size: 14px;
+      }
     }
   </style>
 </head>
