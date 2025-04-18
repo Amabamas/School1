@@ -2,7 +2,61 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Школа</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      background-color: #f4f4f4;
+      color: #333;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 330px;
+      padding: 20px 0;
+      background-color: #ffffff;
+      border-bottom: 2px solid #ccc;
+      text-align: center;
+    }
+    .logo-title {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .logo {
+      width: 80px;
+      height: auto;
+    }
+    .logo-text {
+      font-size: 40px;
+      font-weight: bold;
+      color: #005bff;
+    }
+    .school-address {
+      font-size: 18px;
+      font-weight: normal;
+    }
+    .contacts {
+      text-align: center;
+    }
+    .contacts p {
+      margin: 0;
+    }
+    .messengers {
+      margin-top: 5px;
+    }
+    .messengers img {
+      width: 24px;
+      height: 24px;
+      margin-left: 5px;
+      cursor: pointer;
+    }
   <title>О проекте</title>
   <style>
     body {
@@ -21,6 +75,20 @@
   </style>
 </head>
 <body>
+<header>
+  <div class="logo-title">
+    <img href="index.html" src="logo.png" alt="Логотип" class="logo" />
+    <div href="index.html" class="logo-text">Игровой формат</div>
+  </div>
+  <div class="school-address">г. Каспийск, ул. Школьная, 10</div>
+  <div class="contacts">
+    <p>+7 (929) 880-06-62</p>
+    <div class="messengers">
+      <a href="https://t.me/your_channel" target="_blank"><img src="telegram.png" alt="Telegram" /></a>
+      <a href="https://wa.me/79991234567" target="_blank"><img src="whatsapp.webp" alt="WhatsApp" /></a>
+    </div>
+  </div>
+</header>
   <h1>О нашем проекте</h1>
   <p>Этот образовательный проект создан для развития детей и подростков в сферах эмоционального интеллекта, критического мышления, финансовой грамотности и многого другого.</p>
   <p>Мы стремимся к тому, чтобы каждый ребенок получил навыки, необходимые в современном мире.</p>
